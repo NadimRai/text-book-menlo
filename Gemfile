@@ -27,6 +27,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'paperclip', '~> 5.1'
+gem 'devise', '~> 4.3'
 
 
 group :development, :test do
