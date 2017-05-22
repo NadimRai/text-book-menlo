@@ -1,0 +1,23 @@
+
+
+<h1>Listings</h1>
+
+
+<br>
+<section class="row text-center placeholders">
+  <% @listings.each do |listing| %>
+    <div class="col-6 col-sm-3 placeholder">
+      <%= image_tag listing.image.url(:medium), class: "img-fluid" %>
+      
+        <div class="text-muted">
+          <%= link_to listing.name, listing %>
+          <p>Listed by <%= listing.user.name %></p>
+        </div>
+    </div>
+  <% end %>
+</section>
+          
+       
+<% if user_signed_in? %>
+  <%= link_to "New Listing", new_listing_path, class: "btn btn-primary"%>
+<% end %>
