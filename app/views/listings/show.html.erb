@@ -1,21 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<%= image_tag @listing.image.url(:medium) %>
+<div class="row">
+  <div class="col-md-8">
+      <%= image_tag @listing.image.url, class: "img-thumbnail" %>  
+  </div>
+  <div class="col-md-4">
+    <h3><%= @listing.name %></h3>
+    <p><%= number_to_currency(@listing.price) %></p>
+    <p><%= @listing.description %></p>
+    <br>   
+  </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @listing.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @listing.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @listing.price %>
-</p>
 
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: 'Are you sure?' } %> |
