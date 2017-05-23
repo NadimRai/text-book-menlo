@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'pages/contact'
 
   get 'seller' , to: 'listings#seller'
+  get 'sales' , to: 'orders#sales'
+  get 'purchases', to: 'order#purchases'
 
   root 'listings#index'
 
