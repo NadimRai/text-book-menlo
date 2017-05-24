@@ -29,6 +29,7 @@ gem 'paperclip', '~> 5.1'
 gem 'devise', '~> 4.3'
 gem 'stripe', '~> 2.9'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 
 group :development, :test do
