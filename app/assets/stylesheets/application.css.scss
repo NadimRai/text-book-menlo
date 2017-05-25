@@ -25,17 +25,21 @@
 
 /** Navbar ****/
 .navbar {
-	box-shadow: 10px 2px 5px #888888;	
+	box-shadow: 10px 2px 5px #888888;
+	background-color: #4c394e;
+
 }
 
 .navbar .navbar-brand{
 	font-family: 'Lobster', cursive;
 	font-size: 2em;
+	color :#f63;
 }
 
 .navbar-nav li{
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.2em;
+	color: #fff;	
 }
 
 /*** End of Navbar ******/
