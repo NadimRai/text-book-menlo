@@ -16,16 +16,29 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 
-.navbar{
-	color: #f63;
+
+
+.navbar {
+	box-shadow: 10px 2px 5px #888888;	
 }
-.navbar-toggleable-md{
-	background: #4c394e;
+
+.navbar .navbar-brand{
+	font-family: 'Lobster', cursive;
+	font-size: 2em;
 }
+
+.navbar-nav li{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2em;
+}
+
+
 .jumbotron{
-	background-image: url('text-book.jpg');
-	height: 250px;
+	
+	height: 350px;
 }
 
 
@@ -36,3 +49,10 @@ li{
 .col-md-3:nth-child(4n+1) {
   clear: left;
 }
+
+h1,h2,h3{
+	
+}
+
+
+
