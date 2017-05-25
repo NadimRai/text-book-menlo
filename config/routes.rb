@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'sales' , to: 'orders#sales'
   get 'purchases', to: 'orders#purchases'
 
-  root 'listings#index'
+  root 'pages#home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
