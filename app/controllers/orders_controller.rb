@@ -33,7 +33,13 @@ class OrdersController < ApplicationController
     token = params[:stripeToken]
 
     begin
+      customer = Stripe::Customer.create(
+      :email => params[:stripeEmail],
+      :source  => params[:stripeToken]
+    )
+
       charge = Stripe::Charge.create(
+        :customer    => customer.id,
         :amount => (@listing.price * 100).floor,
         :currency => "usd",
         :card => token

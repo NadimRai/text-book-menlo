@@ -32,6 +32,9 @@ class ListingsController < ApplicationController
     @listing = Listing.new(listing_params)
     @listing.user_id = current_user.id
 
+    Stripe.api_key = ENV['SECRET_KEY']
+    token = params[:stripeToken]
+
     respond_to do |format|
       if @listing.save
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
