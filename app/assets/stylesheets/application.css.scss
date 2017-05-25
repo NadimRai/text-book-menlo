@@ -16,11 +16,14 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 
 
-
+/** Navbar ****/
 .navbar {
 	box-shadow: 10px 2px 5px #888888;	
 }
@@ -35,24 +38,24 @@
 	font-size: 1.2em;
 }
 
+/*** End of Navbar ******/
 
-.jumbotron{
-	
-	height: 350px;
-}
-
-
-li{
-	padding-left: 20px;
-}
 
 .col-md-3:nth-child(4n+1) {
   clear: left;
 }
 
-h1,h2,h3{
-	
+/** Carousel sidebar **/
+
+.mini li{
+	list-style: none;
 }
 
+.img-rounded {
+	border-radius: 12px;
+}
+/** End of Carousel sidebar **/
 
-
+.marketing{
+	margin-top: 200px;
+}
