@@ -21,8 +21,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Shadows+Into+Light');
 
-
+/** pages#home **/
 /** Navbar ****/
 .navbar {
 	box-shadow: 10px 2px 5px #888888;
@@ -44,7 +45,13 @@
 
 /*** End of Navbar ******/
 
-
+.header-text{
+	color: #c7002c;
+	text-align: center;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 1.8em;
+	margin-left: 30%;
+}
 .col-md-3:nth-child(4n+1) {
   clear: left;
 }
@@ -61,5 +68,62 @@
 /** End of Carousel sidebar **/
 
 .marketing{
-	margin-top: 200px;
+	margin-top: 100px;
 }
+
+.style_image {
+  width: 250px;
+  height: 200px;
+}
+
+/**** video *******/
+#background{
+	width:500px;
+}
+
+.image_size{
+	width: 450px;
+	height: 300px;
+}
+button{
+	margin-top: 10px;
+}
+
+ul.list-inline {
+  margin-top: 10px;
+}
+ul.social-buttons li a {
+  display: block;
+  background-color: #222222;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  font-size: 20px;
+  line-height: 40px;
+  color: white;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+  background-color: #fed136;
+}
+.fa{
+	padding-left: 10px
+}
+
+.social-heading{
+	margin-left:80px;
+}
+/*** end of pages#home ***/
+
+/** login ****/
+.col-md-offset-3{
+	border: 1px solid #D3D3D3;
+	padding: 20px;
+	border-radius: 8px;
+}
+
