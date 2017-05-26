@@ -1,78 +1,91 @@
-<%= render 'shared/carousel' %>  
+<hr>
+  <span class="header-text">Find Cheap Textbooks. Save on  Used Textbooks</span>
+<hr>
+
+<%= render 'shared/carousel' %>
 
 
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+<div class="container marketing">
+  <hr>
+    <span class="header-text"><i class="fa fa-book" aria-hidden="true"></i>What's on Text-Book? Find Out!</span>
+  <hr>
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+  <% @listings.each do |listing| %>
+    <div class="col-md-3">
+      <div class="thumbnail">
+          <%=  image_tag listing.image, class: 'style_image' %>
+          <div class="caption">
+            <h3><%= listing.name %></h3>
+            <p><%= number_to_currency(listing.price) %></p>
+            <p><%= "Sold by #{listing.user.name}" %></p>
+          </div>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
+      </div><!-- /.col-lg-4 -->
+  <% end %>
+    
+    
+  </div><!-- /.row -->
 
 
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
+  <!-- START THE FEATURETTES -->
 
-    </div><!-- /.container -->
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Why choose Text-Book? </h2>
+      <p class="lead">We make learning affordable. Textbook prices have increased by 437% since 2000. We believe learning should be accessible to everyone. </p>
+    </div>
+    <div class="col-md-5">
+      <%= video_tag 'math.mp4',id: 'background',
+            autoplay: true,
+            loop: true,
+            muted: true %>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7 col-md-push-5">
+      <h2 class="featurette-heading">Make a difference. </h2>
+      <p class="lead">Students like you will change the world and we want to help. Here are a few ways to go beyond the classroom.<br>
+        <button class="btn btn-info">See for yourself.</button>
+      </p>
+    </div>
+    <div class="col-md-5 col-md-pull-7">
+      <%= image_tag 'student-help.png' , class: 'image_size' %>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-4 col-md-offset-4">
+      <h4 class="social-heading">Follow US </h4>
+      <ul class="list-inline social-buttons">
+          <li><a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li><a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a>
+          <li><a href="#"><i class="fa fa-instagram" ></i></a>
+          </li>
+          <li><a href="#"><i class="fa fa-github"></i></a>
+          </li>
+        </ul>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <!-- /END THE FEATURETTES -->
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="pull-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2017 Text-Book, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</div><!-- /.container -->
