@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<%= form_for([@listing, @review]) do |f| %>
+			<p>
+				<%= f.label :rating %>
+		    	<%= f.number_field :rating %>
+			</p>
+			<p>
+				 <%= f.label :review %>
+				<%= f.text_area :comment %>
+			</p>
+		   
+			<%= f.submit "Edit", class: 'btn btn-primary' %>
+		<% end %>
+	</div>
+</div>
