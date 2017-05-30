@@ -15,6 +15,11 @@ class ListingsController < ApplicationController
   # GET /listings/1
   # GET /listings/1.json
   def show
+    if @listing.reviews.blank?
+      @average_review = 0
+    else
+      @average_review = @listing.reviews.average(:rating).round(2)
+    end
   end
 
   # GET /listings/new

@@ -7,6 +7,13 @@
   <div class="col-md-4">
     <h3><%= @listing.name %></h3>
     <p><%= number_to_currency(@listing.price) %></p>
+    <p>
+      <h4 class="avg-rating">Average Rating</h4>
+      <div class="average-review-rating" data-score=<%= @average_review %>></div>
+      <span class="number-of-reviews">
+        <em>From: </em><%= @listing.reviews.count %> reviews 
+      </span>
+    </p>
     <p><%= @listing.description %></p>
     <br>
     <div class="center">
@@ -42,3 +49,12 @@
 </script>
 
 
+<script>
+  $('.average-review-rating').raty({
+    readOnly: true,
+    path: '/assets/',
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script>
