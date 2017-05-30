@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-   before_action :set_listing 
+  before_action :set_listing 
   before_action :find_review, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit]
 
