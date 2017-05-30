@@ -2,8 +2,9 @@
 	<div class="col-md-10 col-md-offset-1">
 		<%= form_for([@listing, @review]) do |f| %>
 			<p>
-				<%= f.label :rating %>
-		    	<%= f.number_field :rating %>
+				<div id="rating-form">
+					<label> Rating </label>
+				</div>
 			</p>
 			<p>
 				 <%= f.label :review %>
@@ -14,3 +15,10 @@
 		<% end %>
 	</div>
 </div>
+
+<script>
+	$('#rating-form').raty({
+		path: '/assets/',
+		scoreName: 'review[rating]'
+	});
+</script>
