@@ -1,0 +1,12 @@
+<%= form_for([@listing, @listing.reviews.build]) do |f| %>
+	<p>
+		<%= f.label :rating %>
+    	<%= f.number_field :rating %>
+	</p>
+	<p>
+		 <%= f.label :review %>
+		<%= f.text_area :comment %>
+	</p>
+   
+	<%= f.submit "Create", class: 'btn btn-primary' %>
+<% end %>
