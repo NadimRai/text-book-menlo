@@ -7,6 +7,7 @@
   <div class="col-md-4">
     <h3><%= @listing.name %></h3>
     <p><%= number_to_currency(@listing.price) %></p>
+    <h4>Subject: <%= @listing.category.name %></h4>
     <p>
       <h4 class="avg-rating">Average Rating</h4>
       <div class="average-review-rating" data-score=<%= @average_review %>></div>
