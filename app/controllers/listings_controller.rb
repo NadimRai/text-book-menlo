@@ -6,6 +6,15 @@ class ListingsController < ApplicationController
   def seller
     @listings = Listing.where(user: current_user).order('created_at DESC')
   end
+
+  def search
+    @listings = Listing.all
+    if params[:search]
+      @listings = Listing.search(params[:search]).order("created_at DESC")
+    else
+      @listings = Listing.all.order("created_at DESC")
+    end
+  end
   # GET /listings
   # GET /listings.json
   def index
