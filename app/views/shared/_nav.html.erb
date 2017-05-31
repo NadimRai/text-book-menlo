@@ -16,6 +16,14 @@
       <li><%= link_to "About", pages_about_path %></li>
       <li><%= link_to "Contact", pages_contact_path %></li>
     </ul>
+    <form class="navbar-form navbar-left">
+      <div class="form-group">
+        <%= form_tag(search_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search Text", class: 'form-control' %>
+          <%= submit_tag "Search", class: 'btn btn-success', :name => nil %>
+        <% end %>
+      </div>
+    </form>
     <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
         <li class="dropdown">
