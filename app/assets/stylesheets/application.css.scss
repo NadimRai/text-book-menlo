@@ -40,7 +40,15 @@
 .navbar-nav li{
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.2em;
-	color: #fff;	
+		
+}
+
+#search-form{
+	margin-top: 8px;
+}
+
+.search-bar{
+	border-radius: 3px;	
 }
 
 /*** End of Navbar ******/
