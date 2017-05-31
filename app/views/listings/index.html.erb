@@ -1,17 +1,22 @@
-<div class="center">
-  <div class="row">
-    <% @listings.each do |listing| %>
-      <div class="col-md-3">
-        <div class="thumbnail">
-          <%= link_to image_tag(listing.image.url), listing %>
-          <div class="caption">
-            <h3><%= listing.name %></h3>
-            <p><%= number_to_currency(listing.price) %></p>
-            <p><%= "Sold by #{listing.user.name}" %></p>
+<h2 class="current-category"><%= params[:category] %></h2>
+<% if @listings.count == 0 %>
+  <h3>There are no plays in this category</h3>
+<% else %> 
+  <div class="center">
+    <div class="row">
+      <% @listings.each do |listing| %>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <%= link_to image_tag(listing.image.url), listing %>
+            <div class="caption">
+              <h3><%= listing.name %></h3>
+              <p><%= number_to_currency(listing.price) %></p>
+              <p><%= "Sold by #{listing.user.name}" %></p>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
+<% end %>
 
