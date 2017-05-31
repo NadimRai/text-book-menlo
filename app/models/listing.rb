@@ -10,4 +10,8 @@ class Listing < ApplicationRecord
   	has_many :orders
   	has_many :reviews
   	belongs_to :category
+
+  	def self.search(search)
+  		where("name ILIKE ?", "%#{search}%") 
+	end
 end
