@@ -1,0 +1,24 @@
+
+
+<% if @listings.blank? %>
+  <h4>There are no  <%= params[:search] %>.</h4>
+<% else %>
+	<div class="center">
+    <div class="row">
+      <% @listings.each do |listing| %>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <%= link_to image_tag(listing.image.url), listing %>
+            <div class="caption">
+              <h3><%= listing.name %></h3>
+              <p><%= number_to_currency(listing.price) %></p>
+              <p><%= "Sold by #{listing.user.name}" %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+
