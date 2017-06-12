@@ -32,6 +32,7 @@ gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'font-awesome-sass', '~> 4.7'
+gem 'omniauth-facebook', '~> 4.0'
 
 
 group :development, :test do
