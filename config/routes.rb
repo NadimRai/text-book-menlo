@@ -20,7 +20,9 @@ Rails.application.routes.draw do
   get 'sales' , to: 'orders#sales'
   get 'purchases', to: 'orders#purchases'
 
-  root 'pages#home'
+  get 'login', to: 'devise/sessions#new', as: 'login'
+
+  root 'listings#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
