@@ -18,6 +18,7 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
+    redirect_to '/users/sign_in' unless user_signed_in?
     if params[:category].blank?
       @listings = Listing.all.order('created_at DESC')
     else
